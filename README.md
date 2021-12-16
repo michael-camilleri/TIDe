@@ -19,7 +19,7 @@ The paper is available [here](https://arxiv.org/pdf/2112.06809.pdf)
 
 ## Implementations
  * The code is provided as is for research purposes and scrutiny of the algorithm, but is not guaranteed to work without the accompanying setup/frameworks.
- * In particular, note dependency on external [SORT](https://github.com/abewley/sort) repository for tracking.
+ * In particular, note dependency on external [SORT](https://github.com/abewley/sort) and SiamMask repositories for tracking.
 
 ## Tracking and Identification Video Clips
 We present sample illustrative videos showing the Bounding Box (BBox) tracking each mouse as given by our identification method, and comparisons with other techniques in [data/results](https://github.com/michael-camilleri/TIM/data/results).
