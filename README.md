@@ -1,7 +1,7 @@
 # TIM (Tracking and long-term Identification using non-visual Markers)
 
 This repository contains Python code and Supplementary material (including Video Clips) supporting our paper:
-> Michael P.J. Camilleri, Li Zhang, Andrew Zisserman and Christopher K.I. Williams, "Tracking and Long-Term Identification Using Non-Visual Markers", arXiv preprint [cs.CV], 2112.06809
+> Michael P.J. Camilleri, Li Zhang, Rasneer S. Bains, Andrew Zisserman and Christopher K.I. Williams, "Tracking and Long-Term Identification Using Non-Visual Markers", arXiv preprint [cs.CV], 2112.06809
 
 The paper is available [here](https://arxiv.org/pdf/2112.06809.pdf)
 
