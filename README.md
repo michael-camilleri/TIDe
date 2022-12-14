@@ -31,6 +31,7 @@ The paper is available [here](https://arxiv.org/pdf/2112.06809.pdf)
      * `Detections.df`: The Detections
      * `Positions.df`: The RFID-based Positions
      * `Annotations.df`: The Annotated Ground-truth BBoxes.
+ * Note, that all dataframes are in compressed pandas format (open with `pd.read_pickle('...', compression='bz2')`)
      
 ### 2.2 Format of Individual Dataframes
 
