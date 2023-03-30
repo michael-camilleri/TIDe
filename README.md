@@ -2,7 +2,9 @@
 
 This repository contains the Tracking and Identification Dataset (TIDe for short) for group-housed mice as described in our paper “Persistent Animal Identification Leveraging Non-Visual Markers” [1] and further elaborated on in Chapters 3/4 of my PhD Thesis “Automated Identification and Behaviour Classification for Modelling Social Dynamics in Group-Housed Mice” [2].
 
-In addition, we also make available code and video clips supporting the paper [1].
+In addition, we also make available code and video clips supporting the paper [1]. 
+
+All the content herein is licensed under the GNU GPL v3.0 License (we provide a copy as part of the repository)
 
 
 ## 1. Repository Structure
@@ -71,10 +73,10 @@ In addition, we also make available code and video clips supporting the paper [1
  * For each frame, we provide an axis-aligned BBox for each visible mouse as well as the tunnel.
  * The annotated BBoxes follow the CoCo format [4], with the additional information:
     * For *images*:
-        * `hard`: bool --- If true, image contains at least one annotation marked as `hard` (see below)
-        * `cage`: str  --- Alphabetical code for the cage from which the observation came (same as in [2]).
+        * `hard`: bool — If true, image contains at least one annotation marked as `hard` (see below)
+        * `cage`: str  — Alphabetical code for the cage from which the observation came (same as in [2]).
     * For *annotations*:
-        * `hard`: bool --- If true, indicates that the mouse/tunnel is difficult to make out. This is a suggestion that such data need not be relied upon too heavily.
+        * `hard`: bool — If true, indicates that the mouse/tunnel is difficult to make out. This is a suggestion that such data need not be relied upon too heavily.
 
 ### 2.2 Identifications Data Subset
  * The ***Identifications*** Subset contains side-view IR videos of the home-cage and RFID-based positions of each of the three mice.
@@ -82,7 +84,7 @@ In addition, we also make available code and video clips supporting the paper [1
  * The basic unit of processing is the video-frame at 25FPS: these are organised into 30-minute long segments. There are multiple segments per-cage.
  * Mice are labelled *R*ed, *G*reen or *B*lue: this is arbitrary but consistent within the cage.
  * Annotations were carried out using VIA [5] at a 4s rate for selected three-minute snippets, yielding 753 annotated frames within the Train split, 573 for Validation and 834 for the Test split.
- * Further details of the annotation and curation process appear in [1, §A] --- for a more detailed description, refer to [2, §3.4.2$-$3.4.3].
+ * Further details of the annotation and curation process appear in [1, §A] — for a more detailed description, refer to [2, §3.4.2─3.4.3].
 
 #### 2.2.1 Storage Organisation
  * The dataset is stored partly within this repository (under `datasets/Identifications`), with the per-segment information available through a dedicated [Identifications Subset page on DataShare (Todo)](todo) as a zip-file: an empty *Segments* directory is provided to indicate where it should exist relative to the root.
@@ -100,13 +102,13 @@ In addition, we also make available code and video clips supporting the paper [1
 #### `Datasplits.df`
  * Indexed by *Cage-ID* (alphabetical) and *Segment-ID* (numerical)
  * We provide two columns:
-    * `Datasplit`: str --- The split to which the segment is assigned: *Train*, *Validate* or *Test*
-    * `Evaluation`: bool --- Whether the segment is used in the end-to-end evaluation (some segments have little usable data due to the mice continuously huddling).
+    * `Datasplit`: str — The split to which the segment is assigned: *Train*, *Validate* or *Test*
+    * `Evaluation`: bool — Whether the segment is used in the end-to-end evaluation (some segments have little usable data due to the mice continuously huddling).
 
 #### `Annotations.df`
  * Indexed by *Cage-ID*, *Segment-ID*, *Frame* (since start of segment) and *Annotation* (arbitrary alphabetical enumeration).
  * The columns are two-level. For each annotation we provide:
-    * `GT.BB`: The annotated axis-aligned bounding box. This is provided in CoCo format as sub-columns --- top-left (x,y) and size (w,h).
+    * `GT.BB`: The annotated axis-aligned bounding box. This is provided in CoCo format as sub-columns — top-left (x,y) and size (w,h).
     * `GT.Metadat`: Metadata about the BBox:
         * `Type`: Indicates if it is a *Single* object, *Huddle* of mice or a *Tentative* identity.
         * `ID`: A single identity (R/G/B or T for Tunnel), or multiple thereof when type is Tentative/Huddle.
@@ -120,14 +122,14 @@ In addition, we also make available code and video clips supporting the paper [1
 #### `Positions.df`
  * Indexed by *Frame* (since segment start)
  * For each frame, we provide the position of each mouse (*R*, *G* and *B*) as captured using the RFID baseplate from the Actual Analytics HCA Rig (see [3])
- * The position is encoded as the antenna number (1 through 18) in a 3$\times$6 grid.
+ * The position is encoded as the antenna number (1 through 18) in a 3×6 grid.
 
 #### `Detections.df`
  * Indexed by *Frame* and *Detection*:
     * We provide up to 5 detections per frame for the mouse class.
  * The columns are two-level. For each detection, we provide:
     * `Det.BB`: The axis-aligned BBox as detected using the FCOS Detector [6]. This is represented in CoCo format as sub-columns --- top-left (x,y) and size (w,h).
-    * `Det.Score`: The confidence score provided by the FCOS detector (0$-$1).
+    * `Det.Score`: The confidence score provided by the FCOS detector (0─1).
 
 -----------
 
