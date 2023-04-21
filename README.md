@@ -4,7 +4,7 @@ This repository contains the Tracking and Identification Dataset (TIDe for short
 
 In addition, we also make available code and video clips supporting the paper [1]. 
 
-All the content herein is licensed under the GNU GPL v3.0 License (we provide a copy as part of the repository)
+The Data is released under the CC-BY 4.0 License: Code is released under the GNU GPL v3.0 License. We provide copies of both license definitions as DATA.LICENSE and CODE.LICENSE respectively.
 
 
 ## 1. Repository Structure
