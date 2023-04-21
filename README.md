@@ -4,8 +4,9 @@ This repository contains the Tracking and Identification Dataset (TIDe for short
 
 In addition, we also make available code and video clips supporting the paper [1]. 
 
-The Data is released under the CC-BY 4.0 License: Code is released under the GNU GPL v3.0 License. We provide copies of both license definitions as DATA.LICENSE and CODE.LICENSE respectively.
+The Dataset (anything under datasets) is released under the CC-BY 4.0 License: Code (directory TIM) is released under the GNU GPL v3.0 License. We provide copies of both license definitions as DATA.LICENSE and CODE.LICENSE respectively.
 
+-------
 
 ## 1. Repository Structure
 
@@ -142,7 +143,7 @@ The Data is released under the CC-BY 4.0 License: Code is released under the GNU
 -----------
 
 ## 4. Tracking and Identification Video Clips
-We present sample illustrative videos showing the BBox tracking each mouse as given by our identification method, and comparisons with other techniques in [data/results](https://github.com/michael-camilleri/TIDe/tree/main/TIM/results).
+We present sample illustrative videos showing the BBox tracking each mouse as given by our identification method, and comparisons with other techniques in [TIM/results](https://github.com/michael-camilleri/TIDe/tree/main/TIM/results).
 
 ### 4.1 DataSet Sample
 
