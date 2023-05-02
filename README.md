@@ -10,7 +10,7 @@ The Dataset (anything under datasets) is released under the CC-BY 4.0 License: C
 
 ## 1. Repository Structure
 
-***Note***: Due to size limitations, the [Detection **images** (Coming Soon)](todo) and [Identifier **Segments** (Coming Soon)](todo) information are stored as zip-files on our University of Edinburgh project pages (DataShare) respectively.
+***Note***: Due to size limitations, the [Detection **images**](https://datashare.ed.ac.uk/handle/10283/4855) and [Identifier **Segments**](https://datashare.ed.ac.uk/handle/10283/4854) information are stored as zip-files on our University of Edinburgh project pages (DataShare) respectively.
 
 ```
 ├── datasets
@@ -66,7 +66,7 @@ The Dataset (anything under datasets) is released under the CC-BY 4.0 License: C
  * Further details about the data collection and annotation process appear in [2, §3.4.4]
 
 #### 2.1.1 Storage Organisation
- * The dataset is stored partly within this repository (under `datasets/Detections`), with the images available through a dedicated [Detections Subset page on DataShare (Coming Soon)](todo) as a zip-file: an empty *images* directory is provided to indicate where it should exist relative to the root.
+ * The dataset is stored partly within this repository (under `datasets/Detections`), with the images available through a dedicated [Detections Subset page on DataShare](https://datashare.ed.ac.uk/handle/10283/4855) as a zip-file: an empty *images* directory is provided to indicate where it should exist relative to the root.
  * The images from all three datasplits (Train/Validate/Test) are stored in the same directory and numbered sequentially from 0 to 4585 (name is with 5 leading zeros).
  * The annotations are stored separately for each datasplit.
 
@@ -88,7 +88,7 @@ The Dataset (anything under datasets) is released under the CC-BY 4.0 License: C
  * Further details of the annotation and curation process appear in [1, §A] — for a more detailed description, refer to [2, §3.4.2─3.4.3].
 
 #### 2.2.1 Storage Organisation
- * The dataset is stored partly within this repository (under `datasets/Identifications`), with the per-segment information available through a dedicated [Identifications Subset page on DataShare (Coming Soon)](todo) as a zip-file: an empty *Segments* directory is provided to indicate where it should exist relative to the root.
+ * The dataset is stored partly within this repository (under `datasets/Identifications`), with the per-segment information available through a dedicated [Identifications Subset page on DataShare](https://datashare.ed.ac.uk/handle/10283/4854) as a zip-file: an empty *Segments* directory is provided to indicate where it should exist relative to the root.
  * The annotations are stored as one pandas dataframe, `Annotations.df`: the rest of the data is grouped with the segment from which it originates.
  * Information about the datasplit (Train/Validate/Test) is provided in the `Datasplits.df` dataframe.
  * Segments are named according to the cage and the segment number within that cage. Within each, there is:
